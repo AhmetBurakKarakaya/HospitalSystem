@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="HOSPITALDataSet" targetNamespace="http://tempuri.org/HOSPITALDataSet.xsd" xmlns:mstns="http://tempuri.org/HOSPITALDataSet.xsd" xmlns="http://tempuri.org/HOSPITALDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="HOSPITALConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="HOSPITALConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.HospitalManagmentSystem.Properties.Settings.GlobalReference.Default.HOSPITALConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="personel_adTableAdapter" GeneratorDataComponentClassName="personel_adTableAdapter" Name="personel_ad" UserDataComponentName="personel_adTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="HOSPITALConnectionString (Settings)" DbObjectName="HOSPITAL.dbo.personel_ad" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT fullname FROM dbo.personel_ad</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="fullname" DataSetColumn="fullname" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="HOSPITALDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="HOSPITALDataSet" msprop:Generator_DataSetName="HOSPITALDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="personel_ad" msprop:Generator_RowEvHandlerName="personel_adRowChangeEventHandler" msprop:Generator_RowDeletedName="personel_adRowDeleted" msprop:Generator_RowDeletingName="personel_adRowDeleting" msprop:Generator_RowEvArgName="personel_adRowChangeEvent" msprop:Generator_TablePropName="personel_ad" msprop:Generator_RowChangedName="personel_adRowChanged" msprop:Generator_RowChangingName="personel_adRowChanging" msprop:Generator_TableClassName="personel_adDataTable" msprop:Generator_RowClassName="personel_adRow" msprop:Generator_TableVarName="tablepersonel_ad" msprop:Generator_UserTableName="personel_ad">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="fullname" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="fullname" msprop:Generator_ColumnPropNameInTable="fullnameColumn" msprop:Generator_ColumnVarNameInTable="columnfullname" msprop:Generator_UserColumnName="fullname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="103" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
